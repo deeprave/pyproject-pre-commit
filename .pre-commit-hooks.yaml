@@ -1,0 +1,7 @@
+-	id: pyproject-check
+	name: Check pyproject.tml syntax and for local paths in uv sources
+	descriptions: Ensure that no dependencies have local urls before commit
+	entry: pyproject_check.py
+	language: python
+	files: ^pyproject.toml$
+
