@@ -4,7 +4,7 @@ import sys
 
 
 def check_uv_sources():
-    file_path = "pyproject.toml"
+    file_path = "../pyproject.toml"
 
     try:
         with open(file_path, "r") as file:
