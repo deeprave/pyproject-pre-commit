@@ -3,9 +3,7 @@ import toml
 import sys
 
 
-def check_uv_sources():
-    file_path = "../pyproject.toml"
-
+def pyproject_check(file_path="pyproject.toml"):
     try:
         with open(file_path, "r") as file:
             pyproject = toml.load(file)
@@ -30,7 +28,8 @@ def check_uv_sources():
     print("No local paths found in [tool.uv.sources].")
     sys.exit(0)
 
+def main():
+    pyproject_check()
 
 if __name__ == "__main__":
-    check_uv_sources()
-
+    pyproject_check()
