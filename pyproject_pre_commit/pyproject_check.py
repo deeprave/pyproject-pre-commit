@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
+from pathlib import Path
 import toml
 import sys
 
 
 def pyproject_check(file_path="pyproject.toml"):
+    file_path = Path(file_path)
+    print(f"checking {file_path.absolute()}")
     try:
-        with open(file_path, "r") as file:
-            pyproject = toml.load(file)
+        pyproject = toml.loads(file_path.read_text())
     except FileNotFoundError:
         print(f"Error: {file_path} not found.")
         sys.exit(1)
