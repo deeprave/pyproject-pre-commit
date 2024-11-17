@@ -4,4 +4,3 @@
   entry: pyproject_check.py
   language: python
   files: ^pyproject.toml$
-
