@@ -1,10 +1,10 @@
 [project]
 name = "pyproject-pre-commit"
-version = "0.5.0"
+version = "0.6.0"
 description = "pyproject-pre-commit checker"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "toml>=0.10.2",
+    "toml>=0.10",
 ]
 scripts = { pyproject_check = "pyproject_pre_commit.pyproject_check:main" }
